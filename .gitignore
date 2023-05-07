@@ -1,1 +1,3 @@
 *.code-workspace
+/quiz_venv
+*.pyc

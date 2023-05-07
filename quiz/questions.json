@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Jak masz na imie?",
+        "answers": ["Anna", "Adrian", "Łukasz", "Kacper"],
+        "good_answer": "Adrian"
+    },
+    {
+        "question": "Ile masz lat?",
+        "answers": [10, 18, 33, 46],
+        "good_answer": 33
+    }
+]
