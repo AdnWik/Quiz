@@ -1,4 +1,5 @@
 import json
+from string import ascii_lowercase
 from random import randint
 
 
@@ -14,30 +15,31 @@ class Question:
 
     def __str__(self) -> str:
         return f'{self.question}'
-
-    def play(self):
+    
+    def show_question(self) -> str:
         print('\n', end='')
-        print("="*50)
-
         print(self)
-        for number, answer in enumerate(self.answers, start=1):
-            print(f'{number}. {answer}')
-        
+        for letter, answer in zip(ascii_lowercase, self.answers):
+            print(f'{letter}. {answer}')
         print('\n', end='')
-        user_answer = int(input('Your answer: '))
-        print(self.answers[user_answer])
+
+    def check_answer(self, user_answer) -> bool:
+        if user_answer.lower() == self.good_answer:
+            return True
+        else:
+            return False
 
     @ staticmethod
     def draw():
-        unused_questions = [q for q in Question.questions if q.used == False]
+        unused_questions = [q for q in Question.questions if not q.used]
         number_of_unused_questions = len(unused_questions)
         if number_of_unused_questions > 0:
-            draw_question = unused_questions[randint(0, number_of_unused_questions - 1)]
+            random_idx = randint(0, number_of_unused_questions - 1)
+            draw_question = unused_questions[random_idx]
             draw_question.used = True
             return draw_question
         else:
             return None
-
 
     @ staticmethod
     def load_questions():

@@ -1,12 +1,12 @@
 [
     {
-        "question": "Jak masz na imie?",
-        "answers": ["Anna", "Adrian", "Łukasz", "Kacper"],
-        "good_answer": "Adrian"
+        "question": "Które z tych zwierząt lata?",
+        "answers": ["Gołąb", "Pingwin", "Pies", "Wąż"],
+        "good_answer": "a"
     },
     {
-        "question": "Ile masz lat?",
-        "answers": [10, 18, 33, 46],
-        "good_answer": 33
+        "question": "Ile liter ma wyraz 'Słoń'?",
+        "answers": [10, 4, 33, 46],
+        "good_answer": "b"
     }
 ]
